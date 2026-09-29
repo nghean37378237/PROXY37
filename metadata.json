@@ -1,0 +1,7 @@
+{
+  "name": "ProxySwitcher Pro - Quản lý Proxy 192.168.1.27",
+  "description": "Công cụ thay đổi proxy, cấu hình reverse proxy, định tuyến HTTP/SOCKS5 và kiểm tra kết nối cho trang http://192.168.1.27/home",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

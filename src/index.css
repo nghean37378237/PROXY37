@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Eye-comfort themes (Mát mắt, dịu mắt, chống mỏi, độ tương phản cao, dễ nhìn) */
+body.theme-ocean {
+  background-color: #080f1a;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(14, 116, 144, 0.22) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(30, 58, 138, 0.25) 0px, transparent 55%),
+    radial-gradient(at 50% 100%, rgba(13, 148, 136, 0.16) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #f1f5f9;
+}
+
+body.theme-slate {
+  background-color: #0a101b;
+  background-image: 
+    radial-gradient(at 20% 0%, rgba(56, 189, 248, 0.16) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(99, 102, 241, 0.18) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.9) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #f8fafc;
+}
+
+body.theme-mint {
+  background-color: #051413;
+  background-image: 
+    radial-gradient(at 10% 0%, rgba(20, 184, 166, 0.22) 0px, transparent 50%),
+    radial-gradient(at 90% 0%, rgba(16, 185, 129, 0.18) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(6, 78, 59, 0.3) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #ecfdf5;
+}
+
+body.theme-charcoal {
+  background-color: #09090b;
+  background-image: 
+    radial-gradient(at 50% 0%, rgba(39, 39, 42, 0.5) 0px, transparent 60%),
+    radial-gradient(at 0% 100%, rgba(24, 24, 27, 0.8) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #fafafa;
+}
+
+body.theme-light {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(224, 242, 254, 0.6) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(224, 231, 255, 0.5) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(241, 245, 249, 0.8) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #0f172a;
+}
+
+/* Light mode overrides for high contrast and readability */
+body.theme-light .border-neutral-800,
+body.theme-light .border-slate-800,
+body.theme-light .border-neutral-850 {
+  border-color: #e2e8f0 !important;
+}
+
+body.theme-light .bg-neutral-900,
+body.theme-light .bg-slate-900,
+body.theme-light .bg-neutral-950,
+body.theme-light .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+body.theme-light .bg-neutral-900\/70,
+body.theme-light .bg-neutral-900\/80,
+body.theme-light .bg-slate-900\/80,
+body.theme-light .bg-slate-950\/75,
+body.theme-light .bg-neutral-950\/70 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.theme-light .text-neutral-100,
+body.theme-light .text-slate-100,
+body.theme-light .text-neutral-200,
+body.theme-light .text-slate-200 {
+  color: #0f172a !important;
+}
+
+body.theme-light .text-neutral-300,
+body.theme-light .text-slate-300,
+body.theme-light .text-neutral-400,
+body.theme-light .text-slate-400 {
+  color: #334155 !important;
+}
+
+body.theme-light .text-neutral-500,
+body.theme-light .text-slate-500 {
+  color: #64748b !important;
+}
+
