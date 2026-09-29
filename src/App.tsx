@@ -35,13 +35,21 @@ export default function App() {
   });
 
   const [theme, setTheme] = useState<ThemeMode>(() => {
-    return (localStorage.getItem(STORAGE_THEME_KEY) as ThemeMode) || 'ocean';
+    return (localStorage.getItem(STORAGE_THEME_KEY) as ThemeMode) || 'mint';
   });
 
   // Keep document.body updated with current eye-comfort theme class
   useEffect(() => {
     localStorage.setItem(STORAGE_THEME_KEY, theme);
-    document.body.classList.remove('theme-ocean', 'theme-slate', 'theme-mint', 'theme-charcoal');
+    document.body.classList.remove(
+      'theme-mint',
+      'theme-ocean',
+      'theme-nordic',
+      'theme-sepia',
+      'theme-light',
+      'theme-charcoal',
+      'theme-slate'
+    );
     document.body.classList.add(`theme-${theme}`);
   }, [theme]);
 

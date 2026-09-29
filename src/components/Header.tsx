@@ -163,28 +163,31 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
 
           {/* Eye-Comfort Theme Selector (Màu Mát Mắt) */}
-          <div className="flex items-center gap-1.5 bg-neutral-900 border border-neutral-800 rounded-md px-2 py-1 text-xs">
-            <Palette className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+          <div className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-700/80 rounded-lg px-2.5 py-1 text-xs shadow-sm">
+            <Palette className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
             <select
               value={theme}
               onChange={(e) => setTheme(e.target.value as ThemeMode)}
-              title={isVi ? 'Chọn tông màu nền mát mắt' : 'Select eye-comfort theme'}
-              className="bg-transparent text-neutral-200 text-xs focus:outline-none cursor-pointer pr-1"
+              title={isVi ? 'Chọn tông màu nền mát mắt chống mỏi' : 'Select eye-comfort theme'}
+              className="bg-transparent text-emerald-300 font-bold text-xs focus:outline-none cursor-pointer pr-1"
             >
-              <option value="ocean" className="bg-slate-900 text-cyan-300">
-                🌊 {isVi ? 'Đại dương dịu mát' : 'Ocean Cool'}
+              <option value="mint" className="bg-[#0b1a17] text-emerald-300">
+                🌿 {isVi ? 'Xanh Thảo Mộc (Mát mắt nhất)' : 'Mint Sage (Most Soothing)'}
               </option>
-              <option value="mint" className="bg-emerald-950 text-emerald-300">
-                🌿 {isVi ? 'Xanh ngọc / Bạc hà' : 'Mint / Pine'}
+              <option value="ocean" className="bg-[#0c1726] text-sky-300">
+                🌊 {isVi ? 'Xanh Biển Êm Dịu' : 'Deep Ocean Cool'}
               </option>
-              <option value="slate" className="bg-slate-900 text-sky-300">
-                🌌 {isVi ? 'Đêm xanh Slate' : 'Slate Night'}
+              <option value="nordic" className="bg-[#101724] text-blue-200">
+                ❄️ {isVi ? 'Xám Băng Bắc Cực' : 'Nordic Ice Slate'}
               </option>
-              <option value="charcoal" className="bg-neutral-950 text-neutral-300">
-                🌑 {isVi ? 'Đen xám than' : 'Charcoal Dark'}
+              <option value="sepia" className="bg-[#171311] text-amber-200">
+                ☕ {isVi ? 'Nâu Ấm Lọc Ánh Sáng Xanh' : 'Warm Sepia Night'}
               </option>
-              <option value="light" className="bg-white text-slate-900">
-                ☀️ {isVi ? 'Giao diện Sáng tinh tế' : 'Daylight Bright'}
+              <option value="light" className="bg-[#f3f6f9] text-slate-900">
+                ☀️ {isVi ? 'Sáng Sương Mai Mát Dịu' : 'Soft Daylight'}
+              </option>
+              <option value="charcoal" className="bg-[#09090b] text-neutral-300">
+                🌑 {isVi ? 'Đen OLED Tối Giản' : 'Charcoal Dark'}
               </option>
             </select>
           </div>

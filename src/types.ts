@@ -83,4 +83,4 @@ export interface TestResult {
 
 export type ActiveTab = 'profiles' | 'staff' | 'tester' | 'generator' | 'troubleshooter' | 'mirror';
 export type Language = 'vi' | 'en';
-export type ThemeMode = 'ocean' | 'slate' | 'mint' | 'charcoal' | 'light';
+export type ThemeMode = 'mint' | 'ocean' | 'nordic' | 'sepia' | 'light' | 'charcoal';
